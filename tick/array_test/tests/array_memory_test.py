@@ -235,7 +235,7 @@ class Test(unittest.TestCase):
             bytes_size = (data_size * 2) + ((n_rows + 1) * 8)
 
             sparsearray_double = scipy.sparse.rand(n_rows, n_cols, 0.3,
-                                                   "csr", "d")
+                                                   format="csr", dtype=np.float64)
 
             tick_double_sparse2d_to_file(cereal_file, sparsearray_double)
 
